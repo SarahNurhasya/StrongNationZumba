@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration Form</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css" media="screen and (max-width : 568px)">
+	<script>
+	
+	window.addEventListener( "load", function () {
+	function sendData() {
+    const XHR = new XMLHttpRequest();
+
+		// Bind the FormData object and the form element
+		const FD = new FormData( form );
+
+		// Define what happens on successful data submission
+		XHR.addEventListener( "load", function(event) {
+		  alert( event.target.responseText );
+		} );
+
+		// Define what happens in case of error
+		XHR.addEventListener( "error", function( event ) {
+		  alert( 'Oops! Something went wrong.' );
+		} );
+
+		// Set up our request
+		XHR.open( "POST", "" );
+
+		// The data sent is what the user provided in the form
+		XHR.send( FD );
+		}
+
+	  // Access the form element...
+	  const form = document.getElementById( "clubform" );
+
+	  // ...and take over its submit event.
+	  form.addEventListener( "submit", function ( event ) {
+		event.preventDefault();
+
+		sendData();
+	  } );
+	} );
+
+	
+	function reset() {
+	   
+	  document.getElementById("clubform").reset();
+	}
+
+</script>
+</head>
+<body>
+	<div id="header">
+		<a href="index.html" class="logo">
+			<img src="images/logo.jpg" alt="">
+		</a>
+		<ul id="navigation">
+			<li>
+				<a href="index_guest.html">home</a>
+			</li>
+			<li>
+				<a href="about_guest.html">about</a>
+			</li>
+			<li>
+				<a href="profile_guest.html">profile</a>
+			</li>
+			<li>
+				<a href="view_form.html">Application</a>
+			</li>
+			<li class="selected">
+				<a href="form.html">Join Us</a>
+			</li>
+		</ul>
+	</div>
+	<div id="body">
+		<h1><span>Register Here</span></h1>
+		<form id="clubform" action="view_form.html" method="get">
+			<input type="text" name="name" placeholder="Name" autofocus required><br><br>
+			<input type="email" name="email" placeholder="Email" autofocus required><br><br>
+			<input type="tel" id="phone" name="phone" placeholder="0123456789" 
+			pattern="[0-9]{11}"><br>
+			<textarea name="address" placeholder="Address" autofocus required></textarea><br><br>
+			
+			<input type="button" name="submit" onclick="submit()" value="Submit">
+			<input type="button" onclick="reset()" value="Reset">
+		</form>
+	</div>
+	<div id="footer">
+		<div>
+			<p>&copy; 2023 by Strong Nation. All rights reserved.</p>
+			<ul>
+				<li>
+					<a href="https://www.twitter.com/" id="twitter">twitter</a>
+				</li>
+				<li>
+					<a href="https://www.facebook.com/" id="facebook">facebook</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

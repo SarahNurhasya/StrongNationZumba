@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Zumba Club Membership System</title>
+ 
+<style>
+h1 {
+	color: black;
+	font-family: verdana;
+	font-size: 150%;
+	text-align: center;
+}
+h3 {
+	color: black;
+	font-family: verdana;
+	font-size: 100%;
+	text-align: center;
+	padding-top: 10px;
+  	padding-right: 400px;
+  	padding-bottom: 10px;
+  	padding-left: 400px;
+}
+
+h4 {
+	color:black;
+	font-family: verdana;
+	font-size: 100%;
+	text-align: center;
+	padding-top: 10px;
+  	padding-right: 400px;
+  	padding-bottom: 10px;
+  	padding-left: 400px;
+}
+
+p {
+	color: black;
+	font-family: verdana;
+	font-size: 100%;
+	text-align: center;
+    padding: 25px 50px 75px;
+}
+.type="image" {
+	margin-top: 50px;
+  	margin-bottom: 50px;
+  	margin-right: 320px;
+  	margin-left: 320px;
+	}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p.groove {border-style: groove;}
+
+#header {
+	margin: 0 auto;
+	padding: 44px 0 50px;
+	text-align: center;
+	width: 960px;
+}
+#header a.logo {
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	width: 340px;
+}
+#header a.logo img {
+	border: 0;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+#header ul {
+	margin: 0;
+	padding: 56px 0 0;
+}
+#header ul li {
+	display: inline;
+	list-style: none;
+	margin: 0;
+	padding: 0 19px;
+}
+#header ul li a {
+	color: #252525;
+	display: inline-block;
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+	padding: 0 0 3px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#header ul li a:hover, #header ul li.selected a {
+	color: #0ba39c;
+}
+
+#footer {
+	background: #252525;
+	margin: 0;
+	padding: 36px 0 42px;
+}
+#footer div {
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+	width: 960px;
+}
+#footer div p {
+	color: #fff;
+	float: left;
+	line-height: 44px;
+	margin: 0 0 0 10px;
+	padding: 0;
+}
+#footer div ul {
+	display: block;
+	float: right;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 256px;
+}
+#footer div ul li {
+	display: block;
+	float: left;
+	list-style: none;
+	margin: 0 10px;
+	padding: 0;
+	width: 44px;
+}
+#footer div ul li a {
+	background: url(../images/icons.jpg) no-repeat 0 0;
+	display: block;
+	height: 44px;
+	margin: 0;
+	padding: 0;
+	text-indent: -99999px;
+	width: 44px;
+}
+#footer div ul li #twitter {
+	background-position: 0 0;
+}
+#footer div ul li #twitter:hover {
+	background-position: -44px 0;
+}
+#footer div ul li #facebook {
+	background-position: 0 -44px;
+}
+#footer div ul li #facebook:hover {
+	background-position: -44px -44px;
+}
+#footer div ul li #googleplus {
+	background-position: 0 -88px;
+}
+#footer div ul li #googleplus:hover {
+	background-position: -44px -88px;
+}
+#footer div ul li #pinterest {
+	background-position: 0 -132px;
+}
+#footer div ul li #pinterest:hover {
+	background-position: -44px -132px;
+}
+</style>
+</head>
+
+<header>
+</header>
+
+<body>
+	<div id="header">
+		<a href="homepage.html" class="logo">
+			<img src="logo.jpg" alt="">
+		</a>
+		<ul id="navigation">
+			<li>
+				<a class="active" href="homepage.html">home</a>
+			</li>
+			<li>
+				<a href="adm_about.html">about</a>
+			</li>
+			<li>
+				<a href="newmember.html">new member</a>
+			</li>
+			<li>
+				<a href="All_Members.html">all member</a>
+			</li>
+		</ul>
+	</div>
+	
+	<script>
+		function myFunction() {
+		var txt;
+		if (confirm("APPROVE AS MEMBERSHIP !!")) {
+		txt = "You pressed CONFIRM!";
+		} else {
+			txt = "You pressed Cancel!";
+			}
+		document.getElementById("demo").innerHTML = txt;
+		}
+	</script>
+
+	<div id="body">
+		<h1><span><img src="icon.png" alt="Icon" class="center" width="80" height="80">
+		<h3>ADMIN 1: JENNY</h3></span></h1><br>
+
+		<img src="icon.png" alt="Icon" class="center" width="80" height="80"> 
+		<h3>FARAH WAHIDAH</h3>
+		<h4 style="color:Red;">STATUS: NOT APPROVE</h4>
+		<h4>(REGISTRATION FOR NEW MEMBER)</h4>
+		
+		<p>
+			<input type = "submit" name = "VIEW" value= "VIEW">
+			<button onclick="myFunction()">APPROVE</button>
+		</p>
+
+		<img src="icon.png" alt="Icon" class="center" width="80" height="80"> 
+		<h3>SARAH NURHASYA</h3>
+		<h4 style="color:Red;">STATUS: NOT APPROVE</h4>
+		<h4>(REGISTRATION FOR NEW MEMBER)</h4>
+
+		<p>	
+			<input type = "submit" name = "VIEW" value= "VIEW">
+			<button onclick="myFunction()">APPROVE</button>
+		</p>
+	</div><br><br>
+	
+	<div id="footer">
+		<div>
+			<p>&copy; 2023 by Zumba. All rights reserved.</p>
+			<ul>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

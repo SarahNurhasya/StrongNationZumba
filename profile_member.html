@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Strong Nation Zumba Club</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+<style>
+.grid-container {
+  display: grid;
+  grid-gap: 10px;
+  background-color: white;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: #DFA0FA;
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.item1 {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+.item2 {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+
+h3 {
+	color: black;
+	font-family: verdana;
+	font-size: 50%;
+	text-align: center;
+	padding-top: 10px;
+  	padding-right: 200px;
+  	padding-bottom: 10px;
+  	padding-left: 200px;
+
+}
+
+</style>
+</head>
+<header>
+<div id="header">
+		<a href="homepage_member.html" class="logo">
+			<img src="images/logo.jpg" alt="">
+		</a>
+		<ul id="navigation">
+			<li>
+				<a href="homepage_member.html" >home</a>
+			</li>
+			<li class="selected">
+				<a href="profile_member.html" >Profile</a>
+			</li>
+			<li>
+				<a href="about_member.html" >about</a>
+			</li>
+			<li>
+				<a href="member_clubmember.html">club membership</a>
+			</li>
+		</ul>
+	</div>
+</header>
+
+<body>
+
+<script>
+		function myFunction2() {
+		var txt;
+		if (confirm("YOUR PROFILE WAS SUCCESSFULLY UPDATED !!")) {
+		txt = "You pressed Update!";
+		} else {
+			txt = "You pressed Cancel!";
+			}
+		document.getElementById("demo").innerHTML = txt;
+		}
+	</script>
+
+
+
+<div class="grid-container">
+	<div class="grid-item item2" size="50%">
+		<h5>MY PROFILE</h5>
+		  <img src="images/profil.jpg" alt="Farah" style="width:10%">
+		  
+		  <h6>NAME: NURFARAH WAHIDAH</h6>
+		  <h6>EMAIL: <i class="fa fa-dribbble">nrfarahwahidah23@gmail.com</i></h6>
+		  <h6>ADDRESS: Jalan 281, Taman Ros 01000 Shah Alam, Selangor.</h6>
+		  </div>
+
+	<div class="grid-item item1" size="110%">
+	  <h5>PERSONAL</h5>
+		<form name="form1" method="post" action="">
+		<h6>NAME	: 
+		<label for="textfield"></label>
+		<input type="text" name="name" id="textfield" placeholder="Name" required />
+	  </h6>
+	  
+	   <h6>EMAIL	: 
+		<label for="textfield"></label>
+		<input type="text" name="email" id="textfield" placeholder="abc@mail.com" required />
+		<span class="error"></span>
+	  </h6>
+	  
+	  <h6>ADDRESS	:
+		<label for="textfield"></label>
+		<input type="text" name="street" id="textfield" placeholder="Address" required />
+	  </h6>
+		<div id="body">
+		  </form>
+		  <form>
+				<input type="button" onclick="homepage_member.html" value="Cancel">
+				<input type="button" onclick="myFunction2()" value="Update">
+			  
+		  </form>
+		  </form>
+			  <a href="homepage_member.html"><button>Cancel</button>
+				  </a>
+			  <a><button onclick="myFunction()">Update</button>
+          </a>
+  </form>
+	</div>
+	</div>
+</div>
+	<div id="footer">
+		<div>
+			<p>&copy; 2023 by Strong Nation. All rights reserved.</p>
+			<ul>
+				<li>
+					<a href="https://www.twitter.com/" id="twitter">twitter</a>
+				</li>
+				<li>
+					<a href="https://www.facebook.com/" id="facebook">facebook</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
+
+

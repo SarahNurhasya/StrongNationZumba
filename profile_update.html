@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Strong Nation Zumba Club</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+<style>
+.grid-container {
+  display: grid;
+  grid-gap: 10px;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: #DABFDE;
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.item1 {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+.item2 {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+p {
+	font-size: 50%;
+}
+h3 {
+	color: black;
+	font-family: sans serif;
+	font-size: 90%;
+	text-align: center;
+	padding-top: 10px;
+  	padding-right: 200px;
+  	padding-bottom: 10px;
+  	padding-left: 200px;
+
+}
+
+.btn {
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+	<script>
+		function myFunction() {
+		var txt;
+		if (confirm("YOUR PROFILE WAS SUCCESSFULLY UPDATED !!")) {
+		txt = "You pressed Update!";
+		} else {
+			txt = "You pressed Cancel!";
+			}
+		document.getElementById("demo").innerHTML = txt;
+		}
+	</script>
+	
+<h1>ADMIN PROFILE</h1>
+
+<div class="grid-container">
+  <div class="grid-item item2">
+  <img src="profil.jpg" alt="John" style="width:20%">
+      <h4>JENNY KIM</h4>
+  <a href="#"><i class="fa fa-dribbble">jennyk@gmail.com</i></a>
+  <h4>ABOUT</h4>
+  <h3>Hi, I'm Jenny. I am instructor in the Zumba Club.</h3>
+  </div>
+  <div class="grid-item item1">
+  <h4>PERSONAL</h4>
+    <form name="form1" method="post" action="">
+    <p>FULL NAME<br>
+    <label for="textfield"></label>
+  <input type="text" name="name" id="textfield" placeholder="Enter full name" required/>
+  </p>
+   <p>EMAIL<br> 
+    <label for="textfield6"></label>
+    <input type="text" name="email" id="textfield6" placeholder="@gmail.com" required/>
+    <span class="error"> <?php echo $emailErr;?></span>
+  </p>
+  <h4>ADDRESS</h4>
+  <p>STREET<br>
+    <label for="textfield5"></label>
+    <input type="text" name="street" id="textfield5" placeholder="Enter street" required/>
+  </p>
+  <p>CITY<br>
+    <label for="textfield5"></label>
+    <input type="text" name="city" id="textfield5" placeholder="Enter street" required/>
+  </p>
+  <p>POSTCODE<br>
+    <label for="textfield5"></label>
+    <input type="text" name="postcode" id="textfield5" placeholder="Enter street" required/>
+  </p>
+  <p>STATE<br>
+    <label for="textfield2"></label>
+    <input type="text" name="state" id="textfield2" placeholder="Enter state" required/>
+  </form>
+      <a href="homepage.html"><button>Cancel</button>
+          </a>
+      <a><button onclick="myFunction()">Update</button>
+          </a>
+  </form>
+  </div>
+
+</div>
+	<div id="footer">
+		<div>
+			<p>&copy; 2023 by Strong Nation. All rights reserved.</p>
+			<ul>
+				<li>
+					<a href="https://www.twitter.com/" id="twitter">twitter</a>
+				</li>
+				<li>
+					<a href="https://www.facebook.com/" id="facebook">facebook</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
+
+
